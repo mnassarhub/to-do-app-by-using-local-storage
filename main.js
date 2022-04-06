@@ -71,6 +71,11 @@ function renderTasks() {
 		<input type="submit" value="delete" class="delete">
     `;
 		tasksDiv.appendChild(taskDiv);
+		if (task.completed) {
+			taskDiv
+				.querySelector('.description')
+				.classList.add('finished');
+		}
 	});
 	const clearBtn = document.createElement('input');
 	clearBtn.type = 'submit';
